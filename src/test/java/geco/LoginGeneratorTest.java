@@ -17,6 +17,12 @@ public class LoginGeneratorTest {
     }
 
     @Test
+    public void testNomCourt(){
+        lg.generateLoginForNomAndPrenom("DU", "Paul");
+        assertTrue("Paul DU login should be PDU", ls.loginExists("PDU"));
+    }
+
+    @Test
     public void testGenerateLoginForNomAndPrenom() {
         lg.generateLoginForNomAndPrenom("DURAND", "Paul");
         assertTrue("Paul DURAND login should be PDUR", ls.loginExists("PDUR"));
